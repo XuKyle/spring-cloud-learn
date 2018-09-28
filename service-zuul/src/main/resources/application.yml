@@ -7,11 +7,13 @@ server:
 spring:
   application:
     name: service-zuul
+
+#路由功能
 zuul:
   routes:
     api-a:
-      path: /api-ribbon/**
+      path: /api-a/**
       serviceId: service-ribbon
     api-b:
-      path: /api-feign/**
+      path: /api-b/**
       serviceId: service-feign

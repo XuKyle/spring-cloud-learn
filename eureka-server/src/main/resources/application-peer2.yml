@@ -1,0 +1,16 @@
+server:
+  port: 8769
+
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+#eureka互相注册
+#启动java -jar eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer1
+
+#  eureka.instance.preferIpAddress=true是通过设置ip让eureka让其他服务注册它。也许能通过去改变去通过改变host的方式。
+
